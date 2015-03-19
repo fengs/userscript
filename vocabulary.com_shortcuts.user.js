@@ -23,22 +23,35 @@
  's' to pronounce, also works in non-list view
  'q' to first word in list
  'w' to last word in list
+
+ In a practice/challenge screen:
+ '1' to choose answer 1
+ '2' to choose answer 2
+ '3' to choose answer 3
+ '4' to choose answer 4
+
  Can be changed to any key or key combination as you want
  */
 
 // right hand keys
 Mousetrap.bind('[', click_prev);
 Mousetrap.bind('\\', click_next); // bind to single \, the extra one is escape character
-Mousetrap.bind(']', click_pronounciation);
+Mousetrap.bind(']', click_pronunciation);
 Mousetrap.bind('-', function() { click_entry(0) });
 Mousetrap.bind('=', function() { click_entry(document.getElementsByClassName("entry").length - 1) });
 
 // left hand keys
 Mousetrap.bind('a', click_prev);
 Mousetrap.bind('d', click_next);
-Mousetrap.bind('s', click_pronounciation);
+Mousetrap.bind('s', click_pronunciation);
 Mousetrap.bind('q', function() { click_entry(0) });
 Mousetrap.bind('w', function() { click_entry(document.getElementsByClassName("entry").length - 1) });
+
+// answering questions in challenge/practice
+Mousetrap.bind('1', function() { click_answer(0) });
+Mousetrap.bind('2', function() { click_answer(1) });
+Mousetrap.bind('3', function() { click_answer(2) });
+Mousetrap.bind('4', function() { click_answer(3) });
 
 
 
@@ -83,8 +96,17 @@ function click_entry(num){
     element.click();
 }
 
-function click_pronounciation(){
+function click_pronunciation(){
     var word = document.getElementsByTagName("h1")[1];
     var audio = word.getElementsByTagName('a')[0];
     audio.click();
+}
+
+function click_answer(num){
+    if(num < 0 || num > 3){
+        return;
+    }
+    var choices = document.getElementsByClassName("choices")[0];
+    var answer = choices.getElementsByTagName('a')[num];
+    answer.click();
 }

@@ -16,7 +16,7 @@ I decided to add my own shortcuts to the website. And here's it is. Basically ea
    For right hand navigation:   
    <kbd>[</kbd> to move to prev word in list  
    <kbd>\\</kbd> to move to next word in list  
-   <kbd>]</kbd> to trigger pronounciation. This also works in non-list view   
+   <kbd>]</kbd> to trigger pronunciation. This also works in non-list view   
    <kbd>-</kbd> to the first word in list  
    <kbd>=</kbd> to the last word in list  
    For left hand navigation:  
@@ -25,6 +25,10 @@ I decided to add my own shortcuts to the website. And here's it is. Basically ea
    <kbd>s</kbd> to trigger pronounciation   
    <kbd>q</kbd> to the first word in list  
    <kbd>w</kbd> to the last word in list 
+3. In a practice/challenge view  
+   <kbd>1</kbd> to choose answer 1  
+   <kbd>2</kbd> to choose answer 2  
+   <kbd>3</kbd> to choose answer 3  
+   <kbd>4</kbd> to choose answer 4  
    
-
 The keys can be overwritten by ones you'd like. The bindings are pretty straight-forward. See script for details.
