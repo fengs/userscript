@@ -15,12 +15,32 @@
  '[' to prev word in list
  '\' to next word in list
  ']' to pronounce, also works in non-list view
+ '-' to first word in list
+ '=' to last word in list
+ Alternatively for left hand keys:
+ 'a' to prev word in list
+ 'd' to next word in list
+ 's' to pronounce, also works in non-list view
+ 'q' to first word in list
+ 'w' to last word in list
  Can be changed to any key or key combination as you want
-*/
+ */
 
+// right hand keys
 Mousetrap.bind('[', click_prev);
 Mousetrap.bind('\\', click_next); // bind to single \, the extra one is escape character
 Mousetrap.bind(']', click_pronounciation);
+Mousetrap.bind('-', function() { click_entry(0) });
+Mousetrap.bind('=', function() { click_entry(document.getElementsByClassName("entry").length - 1) });
+
+// left hand keys
+Mousetrap.bind('a', click_prev);
+Mousetrap.bind('d', click_next);
+Mousetrap.bind('s', click_pronounciation);
+Mousetrap.bind('q', function() { click_entry(0) });
+Mousetrap.bind('w', function() { click_entry(document.getElementsByClassName("entry").length - 1) });
+
+
 
 function click_next(){
     // if not in list view
@@ -56,7 +76,7 @@ function click_entry(num){
         num = 0; // cannot go before first word
     }else if(num >= document.getElementsByClassName("entry").length){
         // cannot go after last word
-        num = document.getElementsByClassName("entry").length - 1;
+        return;
     }
     var entry_no = "entry" + num;
     var element = document.getElementById(entry_no);

@@ -13,8 +13,18 @@ I decided to add my own shortcuts to the website. And here's it is. Basically ea
 ### Usage:
 1. Install the script with GreaseMonkey on Firefox, TamperMonkey on Chrome.
 2. In a list view, for example the [100 SAT Words](http://www.vocabulary.com/lists/148703#view=definitions&word=accord)  
-   <kbd>[</kbd> to move to prev word  
-   <kbd>\\</kbd> to move to next word  
-   <kbd>]</kbd> to trigger pronounciation. This also works in non-list view.
+   For right hand navigation:   
+   <kbd>[</kbd> to move to prev word in list  
+   <kbd>\\</kbd> to move to next word in list  
+   <kbd>]</kbd> to trigger pronounciation. This also works in non-list view   
+   <kbd>-</kbd> to the first word in list  
+   <kbd>=</kbd> to the last word in list  
+   For left hand navigation:  
+   <kbd>a</kbd> to move to prev word in list  
+   <kbd>d</kbd> to move to next word in list  
+   <kbd>s</kbd> to trigger pronounciation   
+   <kbd>q</kbd> to the first word in list  
+   <kbd>w</kbd> to the last word in list 
+   
 
-The keys can be overwritten by ones you'd like. See comments for details.
+The keys can be overwritten by ones you'd like. The bindings are pretty straight-forward. See script for details.
